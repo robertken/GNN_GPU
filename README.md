@@ -57,7 +57,7 @@ sudo -H -u hpcc pip3 install --user tensorflow-gpu==1.14 keras
 
 
 ### Included Training Data
-Included is the MNIST [Dataset](Datasets/data_files) see [reference](http://yann.lecun.com/exdb/mnist/), used in in the experiments and exmaples. Additionally, the script to make
+Included is the MNIST [Dataset](Datasets/data_files) (see [reference](http://yann.lecun.com/exdb/mnist/)) used in in the experiments and exmaples. Additionally, the script to make
 the two larger MNIST datasets (to simulate larger data) is included as a Jupyter notebook. 
 
 
