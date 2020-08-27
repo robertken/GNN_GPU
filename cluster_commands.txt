@@ -1,0 +1,59 @@
+sudo /opt/HPCCSystems/sbin/configmgr
+
+/opt/HPCCSystems/bin/updtdalienv /etc/HPCCSystems/environment.xml -f
+
+sudo -u hpcc cp /etc/HPCCSystems/environment.xml /etc/HPCCSystems/source/environment-orig.xml
+sudo -u hpcc cp /etc/HPCCSystems/environment.xml /etc/HPCCSystems/source/environment2.xml
+
+sudo -u hpcc cp /etc/HPCCSystems/source/environment-orig.xml /etc/HPCCSystems/environment.xml
+
+sudo -u hpcc cp /etc/HPCCSystems/source/environment1.xml /etc/HPCCSystems/environment.xml
+sudo -u hpcc cp /etc/HPCCSystems/source/environment2x8.xml /etc/HPCCSystems/environment.xml
+sudo -u hpcc cp /etc/HPCCSystems/source/environment10.xml /etc/HPCCSystems/environment.xml
+
+
+sudo /opt/HPCCSystems/sbin/hpcc-push.sh -s /etc/HPCCSystems/source/environment2.xml -t /etc/HPCCSystems/environment.xml
+sudo /opt/HPCCSystems/sbin/hpcc-push.sh -s /etc/HPCCSystems/source/environment4.xml -t /etc/HPCCSystems/environment.xml
+sudo /opt/HPCCSystems/sbin/hpcc-push.sh -s /etc/HPCCSystems/source/environment8.xml -t /etc/HPCCSystems/environment.xml
+sudo /opt/HPCCSystems/sbin/hpcc-push.sh -s /etc/HPCCSystems/source/environment2x8.xml -t /etc/HPCCSystems/environment.xml
+sudo /opt/HPCCSystems/sbin/hpcc-push.sh -s /etc/HPCCSystems/source/environment2.xml -t /etc/HPCCSystems/source/environment2.xml
+
+sudo /opt/HPCCSystems/sbin/hpcc-push.sh -s /etc/HPCCSystems/source/environment4x1.xml -t /etc/HPCCSystems/environment.xml
+
+sudo /opt/HPCCSystems/sbin/hpcc-push.sh -s /etc/HPCCSystems/environment.xml -t /etc/HPCCSystems/environment.xml
+
+sudo /opt/HPCCSystems/sbin/hpcc-run.sh systemctl start hpccsystems-platform.target
+
+
+sudo systemctl start hpccsystems-platform.target
+sudo systemctl stop hpccsystems-platform.target
+
+FOR SINGLE MACHINES?:
+sudo /etc/init.d/hpcc-init start
+sudo /etc/init.d/hpcc-init restart
+sudo service hpcc-init restart
+
+FOR MULTIMACHINES:
+ON MASTTER:
+sudo systemctl start hpccsystems-platform.target
+
+ON EACH:
+sudo /etc/init.d/hpcc-init start
+
+
+sudo apt-key add /var/cuda-repo-ubuntu1804-10-0-local-10.0.130-410.48_1.0-1_amd64/7fa2af80.pub
+
+
+environment area, computer names
+
+
+create ubuntu username and password
+https://serverpilot.io/docs/how-to-enable-ssh-password-authentication/
+
+make it login: ubuntu, password: ubuntu
+https://itsfoss.com/change-password-ubuntu/
+
+Download the hpcc
+ scp hpcc_file_downloader.bash ubuntu@10.0.0.129:hpcc_file_downloader.bash
+
+ssh into each new machine, and manually install hpcc, and other requirements
