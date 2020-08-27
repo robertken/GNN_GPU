@@ -1,4 +1,3 @@
-datasets/*
 GNN-V1/Test/Datasets/HAR/*
 *.h5
 benchmarks/mnist_data/fashion_mnist_test_noheader
