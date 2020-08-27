@@ -12,6 +12,10 @@ This repository consists of a modified GNN bundle and example code showing how i
 multiple physical computers or even onto just one. Choosing how many GPUs to use is up to the developer as each model and dataset are different. Training time performance metrics are provided that demonstrate
 the scalability of the setup with respect to training dataset size and neural network size (measured as a number of trainable feaetures).
 
+## Performance
+
+![Average Speedup](images/speedup.png)
+
 ## Getting Started
 
 ### Requirements
@@ -67,12 +71,18 @@ Spray in the following way, with appropriate names.
 * MNIST: Fixed size = 785
 	* Train: mnist::train
 	* Test: mnist::test
+	* Contains 60k training images
+	* ~ 50 MB in size
 * Medium MNIST: Fixed size = 785
 	* Train: mnist::med::train
 	* Test: mnist::med::test
+	* Contains 600k training images
+	* ~500 MB in size
 * Large MNIST: Fixed size = 785
 	* Train: mnist::big::train
 	* Test: mnist::big::test
+	* Contains 6M training images
+	* ~ 5GB in size
 
 ### Examples
 Included in this bundle are some [examples](examples/), found in the examples directory. It is recomended to start with an [MLP trained on MNIST](examples/mnist_mlp.ecl)
