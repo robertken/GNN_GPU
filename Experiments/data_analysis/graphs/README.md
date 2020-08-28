@@ -2,7 +2,6 @@
 
 The graphs were made from the experimental results. It compares the training time versus cluster size (2, 4, 8, 16 nodes) for both GPU and CPU for a given dataset size and NN model size.
 
-For example, the "big6000k.png" file graphs the training time for the largest dataset size and the largest NN size.
 
 * NN Size
 	* Big: 69M trainable parameters
@@ -12,3 +11,8 @@ For example, the "big6000k.png" file graphs the training time for the largest da
 	* 60k: ~5MB
 	* 600k: ~50MB
 	* 6000k: ~5GB
+
+
+For example, the "big6000k.png" file graphs the training time for the largest dataset size and the largest NN size.
+
+!["big6000k](big6000k.png)
