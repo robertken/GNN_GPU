@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1598380461985.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "929539746",
+    "id" : "B1E7DCBB",
+    "lastKnownWriteTime" : 1598567122,
+    "last_content_update" : 1598567122276,
+    "path" : "~/Work/2020Internship/data_analysis/make_graphs.R",
+    "project_path" : "make_graphs.R",
+    "properties" : {
+        "cursorPosition" : "153,87",
+        "scrollLine" : "134",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
