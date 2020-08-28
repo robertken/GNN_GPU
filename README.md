@@ -15,7 +15,7 @@ the scalability of the setup with respect to training dataset size and neural ne
 ## Performance
 
 The performance of GPU accelerated GNN was evaluated with a series of experiments, comparing CPU-GNN and GPU-GNN. using 2, 4, 8, and 16 nodes (node is a CPU or GPU) accross two AWS instances (p2.8xlarge) using 9 different combinations of neural network size and training data set sizes. The figure below shows
-the average speedup using GPUs over CPUs is shown (the [Experiments](Experiments/) dir has more granular comparisons). The speedup is how much faster is using a GPU compared to a CPU. The results are averaged between all node sizes. Thus, this graph clearly shows that using GPUs is always faster, but the degree of the speedup is dependent on the NN model size and the data set size.
+the average speedup using GPUs over CPUs is shown (the [Experiments](Experiments/data_analysis/graphs/) dir has more granular comparisons). The speedup is how much faster is using a GPU compared to a CPU. The results are averaged between all node sizes. Thus, this graph clearly shows that using GPUs is always faster, but the degree of the speedup is dependent on the NN model size and the data set size.
 
 As you can see from the figure, the speedup for a small NN model, in this case one with 34k trainable parameters, is independent from the dataset size and marginally faster than using a CPU alone. 
 Once the model is of sufficient size, you can see the GPUs are significantly faster than CPU alone. It is worth mentioning the GPUs used in these experiments are no longer cutting edge, thus newer, 
